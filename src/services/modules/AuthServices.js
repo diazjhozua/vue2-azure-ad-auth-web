@@ -26,11 +26,21 @@ export const login = async () => {
         Axios.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${newTokenResponse.idToken}`;
-
       return true;
     }
   } catch (error) {
     console.error(error);
     return false;
+  }
+};
+
+export const getAccount = () => {
+  try {
+    let account;
+    account = msalInstance.getAllAccounts()[0];
+    return account;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 };
