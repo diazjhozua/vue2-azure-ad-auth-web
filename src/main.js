@@ -10,7 +10,7 @@ const msalConfig = {
     clientId: "ce2159a2-7166-4290-b783-bbdf49bd2a09",
     authority:
       "https://login.microsoftonline.com/bfa885b8-69a2-4f47-898d-72773db7a2cb",
-    redirectUri: "http://localhost:8080", // It has to be configured on your Azure tenant
+    redirectUri: "https://black-rock-03532e100.1.azurestaticapps.net", // It has to be configured on your Azure tenant
     scopes: ["User.Read"],
   },
   cache: {
