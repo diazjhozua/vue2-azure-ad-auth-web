@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <p class="item-txt">
-      {{ msg }}
+      {{ resource.Name }}
     </p>
   </div>
 </template>
@@ -10,7 +10,7 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    resource: Object,
   },
 };
 </script>

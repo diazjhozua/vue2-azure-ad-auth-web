@@ -3,7 +3,9 @@
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld :msg="`Hi Mr. ${account}!`" />
 
-    <ResourceItem />
+    <div v-for="(resource, index) in resources" :key="index">
+      <ResourceItem :resource="resource" />
+    </div>
   </div>
 </template>
 
@@ -19,7 +21,9 @@ export default {
     HelloWorld,
     ResourceItem,
   },
-  data: () => ({}),
+  data: () => ({
+    resources: [],
+  }),
   computed: {
     ...mapState("auth", ["account"]),
   },
@@ -28,7 +32,7 @@ export default {
       const response = await axios.get(
         "https://func-resources-diaz-jpeast-01.azurewebsites.net/api/display-resources-list-trigger"
       );
-      console.log("response", response);
+      this.resources = response.data;
     } catch (error) {
       console.error("error", error);
     }
