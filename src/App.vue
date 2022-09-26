@@ -1,12 +1,27 @@
 <template>
   <div id="app">
     <nav>
+      <a href="#" v-if="accounts !== 0" @click="logout()">Logout</a>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout: function () {
+      this.$msal.logoutRedirect();
+    },
+  },
+  async created() {
+    await this.$msal.authenticateRedirect();
+    console.log("this.account", this.accounts);
+  },
+};
+</script>
 
 <style>
 #app {
