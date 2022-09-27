@@ -4,19 +4,6 @@ import router from "./router";
 import store from "./store";
 import { default as msalPlugin } from "vue-msal-browser";
 
-console.log(
-  "process.env.VUE_APP_MSAL_TENANT_ID",
-  process.env.VUE_APP_MSAL_TENANT_ID
-);
-console.log(
-  "process.env.VUE_APP_MSAL_CLIENT_ID",
-  process.env.VUE_APP_MSAL_CLIENT_ID
-);
-console.log(
-  "process.env.VUE_APP_MSAL_REDIRECT_URI",
-  process.env.VUE_APP_MSAL_REDIRECT_URI
-);
-
 const msalConfig = {
   auth: {
     tenant: process.env.VUE_APP_MSAL_TENANT_ID,
