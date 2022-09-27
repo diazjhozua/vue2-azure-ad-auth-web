@@ -6,11 +6,10 @@ import { default as msalPlugin } from "vue-msal-browser";
 
 const msalConfig = {
   auth: {
-    tenant: "bfa885b8-69a2-4f47-898d-72773db7a2cb",
-    clientId: "ce2159a2-7166-4290-b783-bbdf49bd2a09",
-    authority:
-      "https://login.microsoftonline.com/bfa885b8-69a2-4f47-898d-72773db7a2cb",
-    redirectUri: "https://black-rock-03532e100.1.azurestaticapps.net", // It has to be configured on your Azure tenant
+    tenant: process.env.VUE_APP_MSAL_TENANT_ID,
+    clientId: process.env.VUE_APP_MSAL_CLIENT_ID,
+    authority: `https://login.microsoftonline.com/${process.env.VUE_APP_MSAL_TENANT_ID}`,
+    redirectUri: process.env.VUE_APP_MSAL_REDIRECT_URI,
     scopes: ["User.Read"],
   },
   cache: {
