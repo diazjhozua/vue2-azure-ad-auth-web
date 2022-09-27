@@ -3,7 +3,7 @@
     <img
       height="250"
       alt="Vue logo"
-      src="https://sablobstoragediazjpeast.blob.core.windows.net/webvue2container/trendmicro-oghero.jpg"
+      src="https://vuewebappdiaz.azureedge.net/webvue2container/trendmicro-oghero.jpg?sp=r&st=2022-09-27T06:45:31Z&se=2022-11-30T14:45:31Z&sv=2021-06-08&sr=c&sig=QcE2kmp%2BztCq%2Brhs35KE%2Ft%2FNyDbA6sK1PWWU7dxAORM%3D"
     />
     <HelloWorld :msg="`Hi Mr. ${account}!`" />
 
