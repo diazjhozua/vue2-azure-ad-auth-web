@@ -13,10 +13,10 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    env:
-      VUE_APP_MSAL_TENANT_ID: ${{ secrets.VUE_APP_MSAL_TENANT_ID }}
-      VUE_APP_MSAL_CLIENT_ID: ${{ secrets.VUE_APP_MSAL_CLIENT_ID }}
-      VUE_APP_MSAL_REDIRECT_URI: ${{ secrets.VUE_APP_MSAL_REDIRECT_URI }}
+    # env:
+    #   VUE_APP_MSAL_TENANT_ID: ${{ secrets.VUE_APP_MSAL_TENANT_ID }}
+    #   VUE_APP_MSAL_CLIENT_ID: ${{ secrets.VUE_APP_MSAL_CLIENT_ID }}
+    #   VUE_APP_MSAL_REDIRECT_URI: ${{ secrets.VUE_APP_MSAL_REDIRECT_URI }}
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v2
