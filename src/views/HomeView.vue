@@ -2,6 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld :msg="`Hi Mr. ${account}!`" />
+    <HelloWorld :msg="`Hi Mr. ${account}!`" />
+    <HelloWorld :msg="`Hi Mr. ${account}!`" />
 
     <div v-for="(resource, index) in resources" :key="index">
       <ResourceItem :resource="resource" />
