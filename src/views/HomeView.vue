@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img
+      height="250"
+      alt="Vue logo"
+      src="https://sablobstoragediazjpeast.blob.core.windows.net/webvue2container/trendmicro-oghero.jpg"
+    />
     <HelloWorld :msg="`Hi Mr. ${account}!`" />
 
     <div v-for="(resource, index) in resources" :key="index">
