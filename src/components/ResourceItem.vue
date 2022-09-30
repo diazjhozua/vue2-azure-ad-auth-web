@@ -1,8 +1,6 @@
 <template>
   <div class="item">
-    <p class="item-txt">
-      {{ resource.Name }}
-    </p>
+    <p class="item-txt">{{ resource.Name }}</p>
   </div>
 </template>
 
