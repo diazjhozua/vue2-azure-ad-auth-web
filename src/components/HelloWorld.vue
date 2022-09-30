@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>These are the list of resources created in resource group</p>
+    <p>{{ subject }}</p>
   </div>
 </template>
 
@@ -10,6 +10,7 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+    subject: String,
   },
 };
 </script>
