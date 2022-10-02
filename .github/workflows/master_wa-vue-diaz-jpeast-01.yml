@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: "wa-vue-diaz-jpeast-01"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BD20E04B70784D42B87E43DC686E05F4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19C25C5B6D1446D6A12A223E6E3C5FF4 }}
           package: .
